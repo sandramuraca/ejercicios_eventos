@@ -9,13 +9,26 @@
 <body>
     <h1>MIS CANCIONES</h1>
     <ul>
-        <li id="cancion1"></li>
-        <li id="cancion2"></li>
-        <li id="cancion3"></li>
-        <li id="cancion4"></li>
-        <li id="cancion5"></li>
+        <li class="cancion"></li>
+        <li class="cancion"></li>
+        <li class="cancion"></li>
+        <li class="cancion"></li>
+        <li class="cancion"></li>
     </ul>
 
-    <script src="./app.js"></script>
+    
+    <script>
+        //for ([expresion-inicial]; [condicion]; [expresion-final])sentencia
+      
+        let canciones = [];
+        const uldom = document.querySelector("ul");
+        const elementos = uldom.querySelectorAll(".cancion");
+
+        for (let i = 0; i <= 4; i++) {
+        canciones[i] = prompt("Ingrese la cancion");
+        elementos[i].innerHTML = canciones[i];
+        }
+
+    </script>
 </body>
 </html>
